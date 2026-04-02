@@ -539,9 +539,10 @@ const EMCD={
   details:[
     {k:"Product",v:"Crypto-backed USDT loans disbursed instantly to EMCD wallet. 4 LTV tiers (50/65/80/90%). Terms 7–60 days. Early repayment with no penalty."},
     {k:"LTV / Rates",v:"50% → 15%/yr · 65% → 15.5%/yr · 80% → 16.5%/yr · 90% → 17%/yr"},
-    {k:"Collateral",v:"7 assets: BTC, ETH, SOL, TON, SUI, LTC, DOGE. Stored in EMCD cold storage — not sent to external DeFi protocols."},
-    {k:"No KYC",v:"No mandatory KYC for loans up to $10,000 — core differentiator vs. most CeFi lenders."},
-    {k:"Risk controls",v:"Liquidation warnings, clear scheme, 5-day grace period. Collateral remains in EMCD internal custody."},
+    {k:"Collateral",v:"7 assets: BTC, ETH, SOL, TON, SUI, LTC, DOGE. Held within the EMCD ecosystem — not sent to external DeFi protocols."},
+    {k:"No KYC",v:"No mandatory KYC for loans up to $10,000. Note: this is a product feature, not actively pushed as a marketing message."},
+    {k:"Speed",v:"Loan approved in ~15 minutes. Collateral returned within ~1 hour of repayment — most crypto is stored in cold wallets so return is processed promptly."},
+    {k:"Risk controls",v:"Liquidation warnings and clear liquidation scheme. Collateral remains within the EMCD ecosystem."},
     {k:"Unique assets",v:"TON and SUI not accepted by any other profiled competitor — strong differentiator for Telegram/crypto-native CIS users."},
     {k:"LatAm expansion",v:"Active expansion into LatAm. The 'no KYC to $10K' + dollar-access positioning maps directly onto AR, VE and MX demand. No local LatAm competitor offers a dedicated crypto loan product."},
     {k:"Support",v:"24/7 support. Single web cabinet flow with alerts and reminders."},
@@ -555,12 +556,12 @@ const PLAYERS=[
   {id:"nexo",section:"global",name:"Nexo",origin:"EU-headquartered · licensed globally",
    category:"CeFi Lender",catTag:"tag-cefi",markets:"Global · EU, LatAm, CIS",
    hook:"Instant crypto credit lines — borrow without selling, earn while you borrow",
-   accent:"#4f8ef7",ltv:"90%",ltvNum:90,rate:"0–13.9%",disb:"USD/USDC/EUR",min:"$50",kyc:"Full KYC",reach:"Global",
+   accent:"#4f8ef7",ltv:"90%",ltvNum:90,rate:"0–18.9%",disb:"USD/USDC/EUR",min:"$50",kyc:"Full KYC",reach:"Global",
    url:"https://nexo.com/borrow",
    assets:["BTC","ETH","XRP","LTC","BNB","ADA","DOT","DOGE","AVAX","MATIC","SOL","LINK","UNI","AAVE","MKR","CRV","SNX","SUSHI","YFI","COMP","BAT","ZRX","ENJ","MANA","SAND","AXS","CHZ","FTM","GALA","ALGO"],assetCount:30,
    details:[
      {k:"Product",v:`Revolving credit line. No fixed term — repay anytime. Nexo card in select markets. <a href="https://nexo.com/borrow" target="_blank">nexo.com/borrow</a>`},
-     {k:"LTV / Rates",v:"90% LTV on stablecoins; 50% on BTC/ETH. From 0% APR (top-tier NEXO holders); standard ~13.9% APR."},
+     {k:"LTV / Rates",v:"90% LTV on stablecoins; 50% on BTC/ETH. From 0% APR (top-tier NEXO token holders) up to 18.9% APR depending on tier and loyalty level."},
      {k:"Collateral",v:"30+ assets. Collateral earns Nexo yield (3–16% APY) while pledged."},
      {k:"Trust signal",v:"$375M custodial insurance (BitGo). Proof of reserves."},
      {k:"CIS",v:"Russian UI available. KYC blocks sanctioned Russian users. Accessible to CIS users with non-Russian passports."},
@@ -568,17 +569,17 @@ const PLAYERS=[
    ],
    weakness:"Withdrawal delays reported 2023. No RUB/BRL/MXN/ARS fiat disbursement. Fully KYC-gated — no light-touch onboarding.",
    opportunity:null,tags:["Global","CeFi"],
-   vs:{ltv:{t:"90%",u:"90%",w:"tie"},rate:{t:"0–13.9%",u:"15–17%",w:"them"},assets:{t:30,u:7,w:"them"},kyc:{t:"Full KYC",u:"No KYC to $10K",w:"us"}}
+   vs:{ltv:{t:"90%",u:"90%",w:"tie"},rate:{t:"0–18.9%",u:"15–17%",w:"tie"},assets:{t:30,u:7,w:"them"},kyc:{t:"Full KYC",u:"No KYC to $10K",w:"us"}}
   },
   {id:"ledn",section:"global",name:"Ledn",origin:"Canada · BTC-focused lender",
    category:"CeFi Lender",catTag:"tag-cefi",markets:"Global · LatAm, US, CA",
    hook:"Bitcoin-backed loans with institutional-grade transparency",
-   accent:"#4f8ef7",ltv:"50%",ltvNum:50,rate:"9.9%+",disb:"USDC/Wire",min:"$500",kyc:"Full KYC",reach:"Global",
+   accent:"#4f8ef7",ltv:"50%",ltvNum:50,rate:"9.99–11.49%",disb:"USDC/Wire",min:"$500",kyc:"Full KYC",reach:"Global",
    url:"https://ledn.io/borrow",
    assets:["BTC","ETH"],assetCount:2,
    details:[
      {k:"Product",v:`BTC-backed USD loans. Deposit BTC, receive USDC or wire. 12-month standard term. <a href="https://ledn.io/borrow" target="_blank">ledn.io/borrow</a>`},
-     {k:"LTV / Rates",v:"50% LTV on BTC. From 9.9% APR. No prepayment penalty."},
+     {k:"LTV / Rates",v:"50% LTV on BTC. Rates 9.99–11.49% APR. No prepayment penalty."},
      {k:"Collateral",v:"BTC and ETH only — 'institutional simplicity' positioning."},
      {k:"Trust signal",v:"Bi-annual proof of reserves. Core brand pillar targeting users burned by Celsius/BlockFi."},
      {k:"CIS",v:"Accessible but no localisation. No Russian UI. Appeals to CIS users holding offshore assets."},
@@ -586,24 +587,24 @@ const PLAYERS=[
    ],
    weakness:"BTC/ETH only. No local fiat disbursement. 50% LTV conservative. Web-only, no mobile app.",
    opportunity:null,tags:["Global","CeFi"],
-   vs:{ltv:{t:"50%",u:"50–90%",w:"us"},rate:{t:"9.9%+",u:"15–17%",w:"them"},assets:{t:2,u:7,w:"us"},kyc:{t:"Full KYC",u:"No KYC to $10K",w:"us"}}
+   vs:{ltv:{t:"50%",u:"50–90%",w:"us"},rate:{t:"9.99–11.49%",u:"15–17%",w:"them"},assets:{t:2,u:7,w:"us"},kyc:{t:"Full KYC",u:"No KYC to $10K",w:"us"}}
   },
   {id:"coinrabbit",section:"global",name:"CoinRabbit",origin:"Global · minimal registration",
    category:"No-KYC CeFi",catTag:"tag-cefi",markets:"Global · AR, VE, CIS",
    hook:"Crypto loan in 5 minutes — no registration, no credit check",
-   accent:"#22d3ee",ltv:"70%",ltvNum:70,rate:"~10% flat",disb:"USDT/USDC",min:"~$100",kyc:"No KYC",reach:"Global",
+   accent:"#22d3ee",ltv:"50–90%",ltvNum:90,rate:"15–16.8%",disb:"USDT/USDC",min:"~$100",kyc:"No KYC",reach:"Global",
    url:"https://coinrabbit.io",
    assets:["BTC","ETH","USDT","SOL","LTC","DOGE","ADA","XRP","DOT","AVAX","MATIC","BNB","TRX","SHIB","UNI","LINK","ATOM","NEAR","FTM","ALGO","+ 30 more"],assetCount:50,
    details:[
      {k:"Product",v:`Instant loans in USDT/USDC. No KYC — deposit collateral, receive loan to your wallet. <a href="https://coinrabbit.io" target="_blank">coinrabbit.io</a>`},
-     {k:"LTV / Rates",v:"70% LTV. Flat ~10% APR. No fixed term. Liquidation at 90% LTV."},
+     {k:"LTV / Rates",v:"LTV range 50–90%. Rates 15–16.8% APR depending on LTV chosen. No fixed term."},
      {k:"Collateral",v:"50+ coins — broadest acceptance of any profiled player."},
      {k:"CIS",v:"Strong fit — no KYC bypasses sanctions friction. Used widely in Russia/CIS via Telegram."},
      {k:"LatAm",v:"Popular in AR/VE — capital controls make KYC-free dollar access attractive."},
    ],
    weakness:"No fiat disbursement. No customer support. Opaque liquidation. Trust barrier above ~$5K.",
    opportunity:null,tags:["Global","No-KYC"],
-   vs:{ltv:{t:"70%",u:"50–90%",w:"us"},rate:{t:"~10%",u:"15–17%",w:"them"},assets:{t:"50+",u:7,w:"them"},kyc:{t:"No KYC",u:"No KYC to $10K",w:"tie"}}
+   vs:{ltv:{t:"50–90%",u:"50–90%",w:"tie"},rate:{t:"15–16.8%",u:"15–17%",w:"tie"},assets:{t:"50+",u:7,w:"them"},kyc:{t:"No KYC",u:"No KYC to $10K",w:"tie"}}
   },
   {id:"youhodler",section:"global",name:"YouHodler",origin:"Swiss/Cyprus · EU-regulated",
    category:"High LTV CeFi",catTag:"tag-cefi",markets:"Global · EU, LatAm, limited CIS",
@@ -624,18 +625,18 @@ const PLAYERS=[
   {id:"binance",section:"global",name:"Binance Loans",origin:"Global · largest exchange by volume",
    category:"Exchange Loans",catTag:"tag-exchange",markets:"Global · dominant CIS + LatAm",
    hook:"Borrow instantly from the world's largest crypto platform",
-   accent:"#fbbf24",ltv:"65%",ltvNum:65,rate:"5.8–15%",disb:"USDT/Crypto",min:"~$100",kyc:"Full KYC",reach:"Global",
+   accent:"#fbbf24",ltv:"65%",ltvNum:65,rate:"0.5–14%",disb:"USDT/Crypto",min:"~$100",kyc:"Full KYC",reach:"Global",
    url:"https://www.binance.com/en/loan",
    assets:["BTC","ETH","BNB","SOL","ADA","XRP","DOT","DOGE","AVAX","MATIC","LINK","UNI","LTC","BCH","ATOM","FIL","NEAR","ICP","VET","ALGO","XLM","TRX","ETC","DASH","XMR","ZEC","IOTA","WAVES","ICX","ONT"],assetCount:30,
    details:[
      {k:"Product",v:`Embedded in Binance app under 'Finance'. Flexible and fixed-term (7–180 days). <a href="https://www.binance.com/en/loan" target="_blank">binance.com/loan</a>`},
-     {k:"LTV / Rates",v:"65% LTV. VIP from 5.8% APR; standard ~12–15%. Hourly accrual."},
+     {k:"LTV / Rates",v:"LTV varies per asset. Rates 0.5–14% APR for main assets (BTC, ETH, BNB). Each asset has its own LTV ratio. Hourly accrual."},
      {k:"CIS",v:"Exited Russia 2023 (sold to CommEX). Still used in Kazakhstan, Ukraine, Uzbekistan."},
      {k:"LatAm",v:"Dominant across BR, MX, AR, CO. PIX/SPEI for on/off ramp — loan disbursement is stablecoin only."},
    ],
    weakness:"Exited Russian market 2023. BCB regulatory pressure in Brazil. Generic global product.",
    opportunity:null,tags:["Global","Exchange"],
-   vs:{ltv:{t:"65%",u:"50–90%",w:"us"},rate:{t:"5.8–15%",u:"15–17%",w:"them"},assets:{t:30,u:7,w:"them"},kyc:{t:"Full KYC",u:"No KYC to $10K",w:"us"}}
+   vs:{ltv:{t:"varies/asset",u:"50–90%",w:"us"},rate:{t:"0.5–14%",u:"15–17%",w:"them"},assets:{t:30,u:7,w:"them"},kyc:{t:"Full KYC",u:"No KYC to $10K",w:"us"}}
   },
   {id:"aave",section:"global",name:"Aave / Venus (DeFi)",origin:"Decentralised · on-chain smart contracts",
    category:"DeFi Protocol",catTag:"tag-defi",markets:"Global · AR, VE, CIS tech users",
@@ -657,24 +658,24 @@ const PLAYERS=[
   {id:"okx",section:"cis",name:"OKX Loans",origin:"Seychelles-registered · strong Asia/CIS",
    category:"Exchange Loans",catTag:"tag-exchange",markets:"Kazakhstan · Ukraine · Uzbekistan · CIS",
    hook:"Borrow crypto against your holdings — flexible terms, competitive rates",
-   accent:"#a78bfa",ltv:"65%",ltvNum:65,rate:"~6%+",disb:"USDT/USDC/Crypto",min:"~$100",kyc:"Full KYC",reach:"CIS + Global",
-   url:"https://www.okx.com/earn/loans",
+   accent:"#a78bfa",ltv:"up to 80%",ltvNum:80,rate:"variable/market",disb:"USDT/USDC/Crypto",min:"~$100",kyc:"Full KYC",reach:"CIS + Global",
+   url:"https://www.okx.com/loan",
    assets:["BTC","ETH","OKB","SOL","ADA","XRP","DOT","DOGE","AVAX","MATIC","LINK","UNI","LTC","BCH","ATOM"],assetCount:15,
    details:[
-     {k:"Product",v:`'Simple Earn Loan' and 'Flexible Loan' in OKX app. <a href="https://www.okx.com/earn/loans" target="_blank">okx.com/earn/loans</a>`},
-     {k:"LTV / Rates",v:"65% LTV. From ~6% APR. Flexible and fixed terms (up to 180 days)."},
+     {k:"Product",v:`'Simple Earn Loan' and 'Flexible Loan' in OKX app. <a href="https://www.okx.com/loan" target="_blank">okx.com/loan</a>`},
+     {k:"LTV / Rates",v:"LTV up to 80% depending on asset. Rates are market-driven (variable), not fixed — fluctuate with supply/demand. Flexible and fixed terms available."},
      {k:"CIS specifics",v:"Maintained broader CIS accessibility post-2022 vs. Binance. Russian UI. Popular in KZ and UA as Binance alternative."},
      {k:"Gap",v:"Main beneficiary of Binance's Russia exit — but the loan product hasn't been developed to match the opportunity."},
    ],
    weakness:"Loans are secondary to exchange. Feature depth lags dedicated CeFi lenders.",
    opportunity:"Captured Binance's CIS user exodus but hasn't capitalised with a strong loan product. Gap remains open for EMCD.",
    tags:["CIS","Exchange"],
-   vs:{ltv:{t:"65%",u:"50–90%",w:"us"},rate:{t:"~6%+",u:"15–17%",w:"them"},assets:{t:15,u:7,w:"tie"},kyc:{t:"Full KYC",u:"No KYC to $10K",w:"us"}}
+   vs:{ltv:{t:"up to 80%",u:"50–90%",w:"us"},rate:{t:"variable/market",u:"15–17% fixed",w:"tie"},assets:{t:15,u:7,w:"tie"},kyc:{t:"Full KYC",u:"No KYC to $10K",w:"us"}}
   },
   {id:"binance-latam",section:"latam",name:"Binance (LatAm)",origin:"Global · dominant LatAm exchange",
    category:"Exchange Loans",catTag:"tag-exchange",markets:"Brazil · Mexico · Argentina · Colombia",
    hook:"Borrow USDT instantly against your crypto — no bank, no paperwork",
-   accent:"#34d399",ltv:"65%",ltvNum:65,rate:"12–15%",disb:"USDT/Crypto",min:"~$100",kyc:"Full KYC",reach:"BR, MX, AR, CO",
+   accent:"#34d399",ltv:"varies",ltvNum:65,rate:"0.5–14%",disb:"USDT/Crypto",min:"~$100",kyc:"Full KYC",reach:"BR, MX, AR, CO",
    url:"https://www.binance.com/en/loan",
    assets:["BTC","ETH","BNB","SOL","ADA","XRP","DOT","DOGE","AVAX","MATIC","LINK","UNI","LTC","BCH","ATOM","FIL","NEAR","ICP","VET","ALGO"],assetCount:20,
    details:[
@@ -689,7 +690,7 @@ const PLAYERS=[
   {id:"nexo-latam",section:"latam",name:"Nexo (LatAm focus)",origin:"EU-headquartered · growing LatAm presence",
    category:"CeFi Lender",catTag:"tag-cefi",markets:"Argentina · Venezuela · Brazil · Mexico",
    hook:"Borrow USD against your BTC — bypass FX restrictions entirely",
-   accent:"#34d399",ltv:"90%",ltvNum:90,rate:"0–13.9%",disb:"USD/USDC",min:"$50",kyc:"Full KYC",reach:"AR, VE, BR, MX",
+   accent:"#34d399",ltv:"90%",ltvNum:90,rate:"0–18.9%",disb:"USD/USDC",min:"$50",kyc:"Full KYC",reach:"AR, VE, BR, MX",
    url:"https://nexo.com/borrow",
    assets:["BTC","ETH","XRP","LTC","BNB","ADA","DOT","DOGE","AVAX","MATIC","SOL","LINK","UNI","AAVE","MKR","CRV","SNX","SUSHI","YFI","COMP","BAT","ZRX","ENJ","MANA","SAND","AXS","CHZ","FTM","GALA","ALGO"],assetCount:30,
    details:[
@@ -700,12 +701,12 @@ const PLAYERS=[
    weakness:"European brand tone creates trust friction. No local payment rails.",
    opportunity:"Right product, wrong tone. Dollar-access message could be owned by a lender with a local voice.",
    tags:["LatAm","CeFi"],
-   vs:{ltv:{t:"90%",u:"90%",w:"tie"},rate:{t:"0–13.9%",u:"15–17%",w:"them"},assets:{t:30,u:7,w:"them"},kyc:{t:"Full KYC",u:"No KYC to $10K",w:"us"}}
+   vs:{ltv:{t:"90%",u:"90%",w:"tie"},rate:{t:"0–18.9%",u:"15–17%",w:"tie"},assets:{t:30,u:7,w:"them"},kyc:{t:"Full KYC",u:"No KYC to $10K",w:"us"}}
   },
   {id:"coinrabbit-latam",section:"latam",name:"CoinRabbit (LatAm)",origin:"Global · minimal registration",
    category:"No-KYC CeFi",catTag:"tag-cefi",markets:"Argentina · Venezuela · Mexico · region-wide",
    hook:"Get USDT in 5 minutes — no registration, no bank, no questions",
-   accent:"#34d399",ltv:"70%",ltvNum:70,rate:"~10% flat",disb:"USDT/USDC",min:"~$100",kyc:"No KYC",reach:"LatAm region-wide",
+   accent:"#34d399",ltv:"50–90%",ltvNum:90,rate:"15–16.8%",disb:"USDT/USDC",min:"~$100",kyc:"No KYC",reach:"LatAm region-wide",
    url:"https://coinrabbit.io",
    assets:["BTC","ETH","USDT","SOL","LTC","DOGE","ADA","XRP","DOT","AVAX","MATIC","BNB","TRX","SHIB","UNI","LINK","ATOM","NEAR","FTM","ALGO","+ 30 more"],assetCount:50,
    details:[
@@ -716,7 +717,7 @@ const PLAYERS=[
    weakness:"No fiat disbursement. No support. Trust barrier limits loan size.",
    opportunity:"High demand, low-trust product. CeFi alternative with local support and BRL/MXN disbursement would take significant share.",
    tags:["LatAm","No-KYC"],
-   vs:{ltv:{t:"70%",u:"50–90%",w:"us"},rate:{t:"~10%",u:"15–17%",w:"them"},assets:{t:"50+",u:7,w:"them"},kyc:{t:"No KYC",u:"No KYC to $10K",w:"tie"}}
+   vs:{ltv:{t:"50–90%",u:"50–90%",w:"tie"},rate:{t:"15–16.8%",u:"15–17%",w:"tie"},assets:{t:"50+",u:7,w:"them"},kyc:{t:"No KYC",u:"No KYC to $10K",w:"tie"}}
   },
 ];
 
@@ -740,12 +741,12 @@ const NO_LOAN=[
 
 const RATES_DATA=[
   {name:"EMCD — OnLock",isEmcd:true,ltv:"50–90%",ltvNum:90,rate:"15–17%/yr",assetCount:7,assets:"BTC, ETH, SOL, TON, SUI, LTC, DOGE",disb:"USDT (EMCD wallet)",min:"TBD",kyc:"No KYC to $10K",reach:"CIS · LatAm"},
-  {name:"Nexo",ltv:"90%",ltvNum:90,rate:"0–13.9%",assetCount:30,assets:"BTC, ETH + 28 others",disb:"USD/USDC/EUR",min:"$50",kyc:"Full KYC",reach:"Global"},
-  {name:"Ledn",ltv:"50%",ltvNum:50,rate:"9.9%+",assetCount:2,assets:"BTC, ETH",disb:"USDC/Wire",min:"$500",kyc:"Full KYC",reach:"Global"},
+  {name:"Nexo",ltv:"90%",ltvNum:90,rate:"0–18.9%",assetCount:30,assets:"BTC, ETH + 28 others",disb:"USD/USDC/EUR",min:"$50",kyc:"Full KYC",reach:"Global"},
+  {name:"Ledn",ltv:"50%",ltvNum:50,rate:"9.99–11.49%",assetCount:2,assets:"BTC, ETH",disb:"USDC/Wire",min:"$500",kyc:"Full KYC",reach:"Global"},
   {name:"YouHodler",ltv:"97%",ltvNum:97,rate:"8–14.9%",assetCount:50,assets:"BTC, ETH + 48 others",disb:"USDC/USDT/EUR",min:"$100",kyc:"Full KYC",reach:"Global"},
-  {name:"CoinRabbit",ltv:"70%",ltvNum:70,rate:"~10% flat",assetCount:50,assets:"BTC, ETH + 48 others",disb:"USDT/USDC",min:"~$100",kyc:"No KYC",reach:"Global"},
-  {name:"Binance Loans",ltv:"65%",ltvNum:65,rate:"5.8–15%",assetCount:30,assets:"BTC, ETH + 28 others",disb:"USDT/Crypto",min:"~$100",kyc:"Full KYC",reach:"Global"},
-  {name:"OKX Loans",ltv:"65%",ltvNum:65,rate:"~6%+",assetCount:15,assets:"BTC, ETH + 13 others",disb:"USDT/USDC",min:"~$100",kyc:"Full KYC",reach:"CIS+"},
+  {name:"CoinRabbit",ltv:"50–90%",ltvNum:90,rate:"15–16.8%",assetCount:50,assets:"BTC, ETH + 48 others",disb:"USDT/USDC",min:"~$100",kyc:"No KYC",reach:"Global"},
+  {name:"Binance Loans",ltv:"varies/asset",ltvNum:65,rate:"0.5–14%",assetCount:30,assets:"BTC, ETH + 28 others",disb:"USDT/Crypto",min:"~$100",kyc:"Full KYC",reach:"Global"},
+  {name:"OKX Loans",ltv:"up to 80%",ltvNum:80,rate:"variable/market",assetCount:15,assets:"BTC, ETH + 13 others",disb:"USDT/USDC",min:"~$100",kyc:"Full KYC",reach:"CIS+"},
   {name:"Aave/Venus (DeFi)",ltv:"80%",ltvNum:80,rate:"2–8% variable",assetCount:20,assets:"BTC(w), ETH + ~18 others",disb:"Stablecoins",min:"None",kyc:"No KYC",reach:"Global (on-chain)"},
 ];
 
@@ -776,7 +777,7 @@ const USPS=[
   {title:"Instant USDT to EMCD wallet",desc:"Funds appear in-account instantly after collateral is locked. No bank transfer delays, no waiting for confirmation windows."},
   {title:"Transparent fixed rates + clear LTV logic",desc:"4 tiers (50/65/80/90%) with fixed annual rates (15–17%). No variable rate surprises. Users know exactly what they pay."},
   {title:"Collateral in EMCD cold storage",desc:"Not sent to external DeFi protocols. No smart-contract hack risk. Stored internally — a key trust advantage over DeFi and some CeFi platforms."},
-  {title:"5-day grace period + liquidation warnings",desc:"Clear liquidation scheme with advance warnings and a 5-day grace period before forced sale. Risk controls designed for CIS retail users."},
+  {title:"Liquidation warnings & risk controls",desc:"Clear liquidation scheme with advance warnings. Risk controls designed for CIS retail users."},
   {title:"Flexible terms, early repayment, no opening fee",desc:"7–60 day terms. Repay early at any time with no penalty. No origination or opening fee. Total cost is transparent."},
   {title:"TON + SUI collateral",desc:"Unique acceptance of TON and SUI as collateral — not offered by any other profiled competitor. Directly relevant to Telegram/crypto-native CIS demographic."},
   {title:"Single web cabinet + 24/7 support",desc:"One unified flow in the EMCD web interface. Alerts and reminders included. 24/7 support — in Russian, unlike most global competitors."},
